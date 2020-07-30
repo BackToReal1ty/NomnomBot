@@ -54,6 +54,8 @@ client.on("message", (message) => {
         client.commands.get("expose").execute(message, args);
     } else if (command === "help") {
         client.commands.get("help").execute(message, args);
+    } else if (command === "game") {
+        client.commands.get("game").execute(message, args);
     }
 });
 
