@@ -2,7 +2,7 @@ module.exports = {
     name: "question",
     description: "this is a command to ask a random question",
     execute(message, args) {
-        switch (Math.floor(Math.random()) * 10 - 5) {
+        switch (Math.floor(Math.random() * 5)) {
             case 0:
                 message.channel.send("**Question:** \nWhy Elton never buy clothes for KayXuan?");
                 break;
