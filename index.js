@@ -56,6 +56,8 @@ client.on("message", (message) => {
         client.commands.get("help").execute(message, args);
     } else if (command === "game") {
         client.commands.get("game").execute(message, args);
+    } else if (command === "stream") {
+        client.commands.get("stream").execute(message, args);
     }
 });
 
