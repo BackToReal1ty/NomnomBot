@@ -6,6 +6,7 @@ module.exports = {
     execute(message, args) {
         const Embed = new MessageEmbed()
             .setColor(12320855)
+            .setAuthor("ElmoAngster03", "https://i.imgur.com/bJ9NutH.jpg", "https://www.instagram.com/elmo_ang/")
             .setTitle("ElmoAngster03")
             .setDescription("**Watch me Play my Favourite Game!**")
             .addFields({name: "Game: ", value: "The Simps 4", inline: true}, {name: "Viewers: ", value: "69", inline: true})
