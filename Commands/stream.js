@@ -11,6 +11,7 @@ module.exports = {
             .addField("Game:     \tViewers:", "The Simps 4\t69")
             .addField("Uptime", "Since Since 27 July 2020")
             .setImage("https://i.imgur.com/3upo5vX.jpeg");
-        message.channel.send("Elton is Currently Streaming on Twitch!\n" + Embed);
+        message.channel.send("Elton is Currently Streaming on Twitch!\n");
+        message.channel.send(Embed);
     },
 };
