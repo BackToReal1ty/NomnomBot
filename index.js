@@ -60,7 +60,7 @@ client.on("message", (message) => {
         client.commands.get("stream").execute(message, args);
     } else if (command === "question") {
         client.commands.get("question").execute(message, args);
-    } else if (command === "photos") {
+    } else if (command === "photos" || command === "photo") {
         client.commands.get("photos").execute(message, args);
     }
 });
