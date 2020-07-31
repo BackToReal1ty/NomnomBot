@@ -105,4 +105,4 @@ client.on("message", (message) => {
 
 //PUT THIS AT THE END OF THE CODE
 //Function to log bot into discord
-client.login(process.env.token);
+client.login("NzM4MzYzNjk4NDAxNTA5Mzg4.XyK0xw.L-MppRtskE_HjPdf0qfkSbE4S2E");
