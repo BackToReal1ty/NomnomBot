@@ -66,6 +66,8 @@ client.on("message", (message) => {
     client.commands.get("photos").execute(message, args);
   } else if (command === "stonks") {
     client.commands.get("stonks").execute(message, args);
+  } else if (command === "balance") {
+    client.commands.get("balance").execute(message, args);
   }
 });
 
