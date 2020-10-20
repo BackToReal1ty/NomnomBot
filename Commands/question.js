@@ -13,13 +13,13 @@ module.exports = {
                 message.channel.send("**Question:** \nWhy Prem so grassy?");
                 break;
             case 3:
-                message.channel.send("**Question:** \nWhy Elton's leg so big");
+                message.channel.send("**Question:** \nWhy Elton's leg so big?");
                 break;
             case 4:
                 message.channel.send("**Question:** \nWhat took Elton so long?");
                 break;
             case 5: 
-                message.channel.send("**Question:** \nWhy Elton lie to Grandma Ang?");
+                message.channel.send("**Question:** \nWhy Elton lie to Ahma?");
         }
     },
 };
