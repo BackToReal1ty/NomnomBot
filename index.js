@@ -6,7 +6,7 @@ const client = new Discord.Client();
 //sets status for bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({ activity: { name: "The Simps 4" } });
+  client.user.setPresence({ activity: { name: "Need for Speed: Discord Nitro" } });
 });
 
 //Prefix for command
@@ -26,19 +26,6 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
 }
 
-//say commands without prefix or arguments
-client.on("message", (message) => {
-  if (message.author.bot) {
-    return;
-  }
-
-  const command = message.content.toLowerCase();
-
-  if (command === "who is a simp") {
-    client.commands.get("whoIsASimp").execute(message);
-  }
-});
-
 //say commands with prefix
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) {
@@ -48,73 +35,12 @@ client.on("message", (message) => {
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
 
-  if (command === "simps" || command === "simp" || command === "elton") {
+  if (command === "start") {
     client.commands.get("simp").execute(message, args);
-  } else if (command === "sorry") {
-    client.commands.get("sorry").execute(message, args);
-  } else if (command === "expose") {
-    client.commands.get("expose").execute(message, args);
-  } else if (command === "help") {
-    client.commands.get("help").execute(message, args);
-  } else if (command === "game") {
-    client.commands.get("game").execute(message, args);
-  } else if (command === "stream") {
-    client.commands.get("stream").execute(message, args);
-  } else if (command === "question") {
-    client.commands.get("question").execute(message, args);
-  } else if (command === "photos" || command === "photo") {
-    client.commands.get("photos").execute(message, args);
-  } else if (command === "stonks") {
-    client.commands.get("stonks").execute(message, args);
-  } else if (command === "balance") {
-    client.commands.get("balance").execute(message, args);
-  }
-});
-
-//greeting command
-client.on("guildMemberAdd", (member) => {
-  const channel = member.guild.channels.cache.find(
-    (channel) => channel.name === "general"
-  );
-
-  if (!channel) {
-    return;
-  }
-
-  channel.send(
-    `Welcome to Nomnom, ${member}, do !help for a list of commands, and please **don't be a simp!**`
-  );
-});
-
-//poll command
-client.on("message", (message) => {
-  let args = message.content.slice(prefix.length).split(/ +/);
-
-  switch (args[0]) {
-    case "poll":
-      const Embed = new Discord.MessageEmbed()
-        .setColor(0xffc300)
-        .setTitle("Initiate Poll")
-        .setDescription("!poll to initiate new poll");
-
-      if (!args[1]) {
-        message.channel.send(Embed);
-        break;
-      }
-
-      let msgArgs = args.slice(1).join(" ");
-
-      message.channel
-        .send("📋 " + "**" + msgArgs + "**")
-        .then((messageReaction) => {
-          messageReaction.react("🙌🏻");
-          messageReaction.react("🖕🏻");
-        });
-
-      break;
-  }
+  } 
 });
 
 //PUT THIS AT THE END OF THE CODE
 //Function to log bot into discord
-client.login("NzM4MzYzNjk4NDAxNTA5Mzg4.XyK0xw.L-MppRtskE_HjPdf0qfkSbE4S2E");
+client.login("Nzc1MzMwMDE2NDA1NzQ5Nzcx.X6kwWA.qj5NrBgLfB5sb9G4a1_um7UmT8I");
+
