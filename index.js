@@ -1,6 +1,9 @@
-//imports discord.js
+//import discord.js
 const Discord = require("discord.js");
 const client = new Discord.Client();
+
+// import Magic Home API 
+const MagicHome = require("magic-home"); 
 
 //logs a message in the console when logged in
 //sets status for bot
@@ -66,9 +69,9 @@ client.on("message", (message) => {
     client.commands.get("photos").execute(message, args);
   } else if (command === "stonks") {
     client.commands.get("stonks").execute(message, args);
-  } else if (command === "balance") {
-    client.commands.get("balance").execute(message, args);
-  }
+  } else if (command === "lights") {
+    client.commands.get("lights").execute(message, args);
+  } 
 });
 
 //greeting command

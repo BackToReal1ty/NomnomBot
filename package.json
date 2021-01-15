@@ -9,6 +9,9 @@
   "author": "Isaac Ang",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "commander": "^6.2.1",
+    "discord.js": "^12.2.0",
+    "magic-home": "^2.6.1",
+    "merge-options": "^3.0.4"
   }
 }
